@@ -1,0 +1,50 @@
+body {
+   color: rgba(0,0,0,0.87);
+   font-family: Roboto, Helvetica, Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+ }
+
+/*pタグの上下感覚を調整*/
+ p{
+   margin-top: 3px;
+   margin-bottom: 3px;
+ }
+
+ #back_button{
+   top: 50%;
+   position: absolute;
+ }
+
+ #next_button{
+   top: 50%;
+   right: 0;
+   position: absolute;
+ }
+
+ .contents{
+   /*ここで中央揃えにしてる*/
+   margin-left: auto;
+   margin-right: auto;
+   width: 70%;
+   height: 50rem;
+ }
+
+ .contents_tytle{
+   text-align: center;
+   font-size: 1.5rem;
+   font-weight: bold;
+ }
+
+ .image_view{
+   margin-left: auto;
+   margin-right: auto;
+   width: 90%;
+   height: 30%;
+   background: blue; /*わかりやすくするための確認用*/
+ }
+
+ #img{
+   width: 20%;
+   height: 20%;
+ }
