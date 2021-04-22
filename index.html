@@ -103,6 +103,8 @@
         img.src = LIST[order].Image;
         //console.log(LIST[order].Image);
         // img.innerHTML = "<img src ='" + LIST[order].Image + "'>"
+            //console.log(LIST[order].Image);
+        // img.innerHTML = "<img src ='" + LIST[order].Image + "'>"
           console.log(LIST[order].Day);
           const timestampToTime = (timestamp) => {
           const date = new Date(timestamp*1000);
@@ -114,6 +116,7 @@
           const ss = `0${date.getSeconds()}`.slice(-2);
           return `${yyyy}/${MM}/${dd} ${HH}:${mm}:${ss}`;
         }
+       
         timestamp = LIST[order].Day.seconds;
         console.log(timestampToTime(timestamp));
         day = document.getElementById("Day");
@@ -127,7 +130,7 @@
         typ = document.getElementById("Type");
         typ.innerHTML = "<p>Type：" + LIST[order].Type + "</p>"
         res = document.getElementById("Registrant");
-        res.innerHTML = "<p>Registrant：" + LIST[order].Resistant + "</p>"
+        res.innerHTML = "<p>Registrant：" + LIST[order].Registrant + "</p>"
 
       }
 
