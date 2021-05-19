@@ -40,7 +40,7 @@
         <p id="Name">製品名</p>
         <p id="Category">カテゴリー</p>
         <p id="Type">省力化タイプ</p>
-        <p id="Registrant">登録者</p>
+        <p id="Resistrant">登録者</p>
     </div>
   </div>
 
@@ -96,43 +96,30 @@
       });
     }
 
-      var drawelements = function(order){
-        rec = document.getElementById("Record_number");
-        rec.innerHTML = "<p>No." + LIST[order].Record_number + "</p>"
-        img = document.getElementById("img");
-        img.src = LIST[order].Image;
-        //console.log(LIST[order].Image);
-        // img.innerHTML = "<img src ='" + LIST[order].Image + "'>"
-            //console.log(LIST[order].Image);
-        // img.innerHTML = "<img src ='" + LIST[order].Image + "'>"
-          console.log(LIST[order].Day);
-          const timestampToTime = (timestamp) => {
-          const date = new Date(timestamp*1000);
-          const yyyy = `${date.getFullYear()}`;
-          const MM = `0${date.getMonth() + 1}`.slice(-2); // getMonth()の返り値は0が基点
-          const dd = `0${date.getDate()}`.slice(-2);
-          const HH = `0${date.getHours()}`.slice(-2);
-          const mm = `0${date.getMinutes()}`.slice(-2);
-          const ss = `0${date.getSeconds()}`.slice(-2);
-          return `${yyyy}/${MM}/${dd} ${HH}:${mm}:${ss}`;
-        }
-       
-        timestamp = LIST[order].Day.seconds;
-        console.log(timestampToTime(timestamp));
-        day = document.getElementById("Day");
-        day.innerHTML = "<p>Date：" + timestampToTime(timestamp)+ "</p>"
-        spo = document.getElementById("Spot");
-        spo.innerHTML = "<p>Location：" + LIST[order].Spot + "</p>"
-        nam = document.getElementById("Name");
-        nam.innerHTML = "<p>Name：" + LIST[order].Name + "</p>"
-        cat = document.getElementById("Category");
-        cat.innerHTML = "<p>Category：" + LIST[order].Category + "</p>"
-        typ = document.getElementById("Type");
-        typ.innerHTML = "<p>Type：" + LIST[order].Type + "</p>"
-        res = document.getElementById("Registrant");
-        res.innerHTML = "<p>Registrant：" + LIST[order].Registrant + "</p>"
 
-      }
+          var drawelements = function(order){
+            rec = document.getElementById("Record_number");
+            rec.innerHTML = "<p>No." + LIST[order].Record_number + "</p>"
+            img = document.getElementById("img");
+            img.src = LIST[order].Image;
+            //console.log(LIST[order].Image);
+            // img.innerHTML = "<img src ='" + LIST[order].Image + "'>"
+              console.log(LIST[order].Day);
+
+            day = document.getElementById("Day");
+            day.innerHTML = "<p>Date：" + timestampToTime(timestamp)+ "</p>"
+            spo = document.getElementById("Spot");
+            spo.innerHTML = "<p>Location：" + LIST[order].Spot + "</p>"
+            nam = document.getElementById("Name");
+            nam.innerHTML = "<p>Name：" + LIST[order].Name + "</p>"
+            cat = document.getElementById("Category");
+            cat.innerHTML = "<p>Category：" + LIST[order].Category + "</p>"
+            typ = document.getElementById("Type");
+            typ.innerHTML = "<p>Type：" + LIST[order].Type + "</p>"
+            res = document.getElementById("Resistant");
+            res.innerHTML = "<p>Resistrant：" + LIST[order].Resistant + "</p>"
+
+          }
 
 
       var i = 0;
