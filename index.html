@@ -40,7 +40,7 @@
         <p id="Name">製品名</p>
         <p id="Category">カテゴリー</p>
         <p id="Type">省力化タイプ</p>
-        <p id="Resistrant">登録者</p>
+        <p id="Registrant">登録者</p>
     </div>
   </div>
 
@@ -117,7 +117,7 @@
             typ = document.getElementById("Type");
             typ.innerHTML = "<p>Type：" + LIST[order].Type + "</p>"
             res = document.getElementById("Resistant");
-            res.innerHTML = "<p>Resistrant：" + LIST[order].Resistant + "</p>"
+            res.innerHTML = "<p>Registrant：" + LIST[order].Resistant + "</p>"
 
           }
 
@@ -127,7 +127,7 @@
 
         function susumu(){
           i = i + 1;
-          if(i > 2){
+          if(i > 7){
               i = 0;
             drawelements(i);
             }else{
@@ -139,7 +139,7 @@
         function modoru(){
             i = i - 1;
             if(i < 0){
-                i = 2;
+                i = 7;
               drawelements(i);
               }else{
               }
